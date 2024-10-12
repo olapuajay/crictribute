@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,75 +8,92 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="ind.css">
+    <link rel="stylesheet" type="text/css" href="CSS/ind.css">
 </head>
 <body>
+    <?php
+        // Player info
+        $player_info = [
+            'name' => 'Virat Kohli',
+            'role' => 'Right-Hand Indian Batsman',
+            'dob' => 'Nov 05, 1988',
+            'birth_place' => 'Delhi, India',
+            'age' => 35,
+            'playing_role' => 'Top Order Batsman',
+        ];
+
+        // Teams
+        $teams = [
+            ['name' => 'India', 'image' => 'https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png'],
+            ['name' => 'Delhi', 'image' => 'https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_1280,q_80/lsci/db/PICTURES/CMS/313300/313301.logo.png'],
+            ['name' => 'RCB', 'image' => 'https://pbs.twimg.com/media/GJBQUvHW4AAlMhA.jpg'],
+            ['name' => 'India U-19', 'image' => 'https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png']
+        ];
+
+        // Achievements
+        $achievements = [
+            ['title' => 'ICC Male Cricketer Of The Decade', 'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC9mIqAlCKOZvEuZ-FPVAOcdba1sOwjNaKvpi9YUTz6Q&s'],
+            ['title' => 'Arjuna Award - 2013', 'image' => 'https://www.samanyagyan.com/images/post/arjuna-award-year-1961-to-2.jpg'],
+        ];
+    ?>
+
     <div class="container-fluid row">
         <div class="col">
             <img class="ind-image" src="https://i.pinimg.com/564x/d3/16/70/d316706bc4e6c2eed3e6f1ce2a8ae29c.jpg" alt="">
         </div>
         <div class="ind-info col">
-            <h1>Virat Kohli</h1>
-            <p>Right-Hand Indian Batsman</p>
+            <h1><?php echo $player_info['name']; ?></h1>
+            <p><?php echo $player_info['role']; ?></p>
             <hr>
-            <div class="row"> 
+            <div class="row">
                 <div class="col">
                     <h6>DOB</h6>
-                    <h5>Nov 05, 1988</h5>
+                    <h5><?php echo $player_info['dob']; ?></h5>
                 </div>
                 <div class="col">
                     <h6>BIRTH PLACE</h6>
-                    <h5>Delhi, India</h5>
+                    <h5><?php echo $player_info['birth_place']; ?></h5>
                 </div>
                 <div class="col">
                     <h6>AGE</h6>
-                    <h5>35 years</h5>
+                    <h5><?php echo $player_info['age']; ?> years</h5>
                 </div>
                 <div class="col">
                     <h6>PLAYING ROLE</h6>
-                    <h5>Top Order Batsman</h5>
+                    <h5><?php echo $player_info['playing_role']; ?></h5>
                 </div>
             </div>
+
+            <!-- Teams Section -->
             <div class="row">
                 <div class="col">
                     <h6>TEAMS</h6>
                     <div class="row">
+                        <?php foreach ($teams as $team): ?>
                         <div class="col">
-                            <img class="team-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png" width="50" height="30" alt="">
-                            <h5>India</h5>
+                            <img class="team-img" src="<?php echo $team['image']; ?>" width="50" height="30" alt="">
+                            <h5><?php echo $team['name']; ?></h5>
                         </div>
-                        <div class="col">
-                            <img class="team-img" src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_1280,q_80/lsci/db/PICTURES/CMS/313300/313301.logo.png" width="50" height="30" alt="">
-                            <h5>Delhi</h5>
-                        </div>
-                        <div class="col">
-                            <img class="team-img" src="https://pbs.twimg.com/media/GJBQUvHW4AAlMhA.jpg" width="50" height="30" alt="">
-                            <h5>RCB</h5>
-                        </div>
-                        <div class="col">
-                            <img class="team-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png" width="50" height="30" alt="">
-                            <h5>India under-19</h5>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
+
+            <!-- Achievements Section -->
             <div class="row">
                 <div class="col">
                     <h6>MAJOR ACHIEVEMENTS</h6>
                     <div class="row">
-                        <div class="col award-1">
-                            <img class="team-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC9mIqAlCKOZvEuZ-FPVAOcdba1sOwjNaKvpi9YUTz6Q&s" width="50" height="30" alt="">
-                            <h5>ICC Male Cricketer Of The Decade</h5>
+                        <?php foreach ($achievements as $achievement): ?>
+                        <div class="col">
+                            <img class="team-img" src="<?php echo $achievement['image']; ?>" width="50" height="30" alt="">
+                            <h5><?php echo $achievement['title']; ?></h5>
                         </div>
-                        <div class="col award-2">
-                            <img class="team-img" src="https://www.samanyagyan.com/images/post/arjuna-award-year-1961-to-2.jpg" width="50" height="30" alt="">
-                            <h5>Arjuna Award - 2013</h5>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
         </div>
-        
     </div>
     <hr>
 
