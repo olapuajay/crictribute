@@ -5,7 +5,7 @@
     font-family: Arial;
 }
 body{
-    background: linear-gradient(to top, #ffffff 6%, #6699ff 38%);
+    background-image: url('utils\img\lords.webp');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -21,8 +21,9 @@ body{
     height: 70px;
     background:#6699ff;
     background-attachment: fixed;
-    box-shadow: 0 0 10px azure;
+    box-shadow: 0 0 10px white;
     position: fixed;
+    margin: 20px;
 }
 .collapse ul {
     margin-left: 30%;
