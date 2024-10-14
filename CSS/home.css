@@ -4,24 +4,16 @@
     box-sizing: border-box;
     font-family: Arial;
 }
-body{
-    background-image: url('utils\img\lords.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-position: center;
-    background-attachment: fixed;
-}
-
 .navbar .navbar-brand {
     font-size: xx-large;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .navbar {
     height: 70px;
-    background:#6699ff;
+    background: white;
     background-attachment: fixed;
-    box-shadow: 0 0 10px white;
+    box-shadow: 0 0 5px black;
+    border-radius: 10px;
     position: fixed;
     margin: 20px;
 }
@@ -50,7 +42,7 @@ body{
 
 #intro{
     width: 100%;
-    color: black;
+    color: white;
     padding: 100px;
     font-family: serif;
     font-size: 1.5rem;

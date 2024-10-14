@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), grey) ,url('utils/img/lords.webp');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
@@ -23,10 +31,10 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" id="Videos">Videos</a>
+                        <a class="nav-link" aria-current="page" href="#" id="Videos">Videos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" id="Login">Login</a>
+                        <a class="nav-link" aria-current="page" href="#" id="Login">Login</a>
                     </li>
                 </ul>
                 <form class="d-flex" id="searchForm">
@@ -39,7 +47,7 @@
     <br>
 
     <div id="intro">
-        <span style="color: #320320; font-family: Georgia, serif; font-size: xx-large;">Welcome, Cricket Enthusiasts</span><br><br>
+        <span style="color: black; font-family: Georgia, serif; font-size: xx-large;">Welcome, Cricket Enthusiasts</span><br><br>
         This platform is a heartfelt homage to the captivating world of cricket,
         where every swing of the bat, breathtaking moment, and legendary player weave the extraordinary tapestry of the sport.
         With a profound love for the game, I embark on a journey to celebrate its rich history,<br>
@@ -99,7 +107,6 @@
                     We're committed to delivering accurate, timely, and engaging content, fueled by our 
                     love for the game and dedication to our users. Join us on this exciting journey as 
                     we continue to grow and evolve, united by our shared love for cricket.<br><br>
-                    <!-- You can use PHP variables to make this section dynamic -->
                 </p>
             </div>
         </div>
@@ -139,6 +146,8 @@
             ?>
         </div>
     </div>
+
+    <h4 class="display-6 text-center mb-5">Contact Us</h4>
 
     <a id="back-to-top" href="#" class="btn btn-dark btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
 
