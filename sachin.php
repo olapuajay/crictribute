@@ -8,76 +8,94 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="ind.css">
+    <link rel="stylesheet" type="text/css" href="CSS/ind.css">
 </head>
 <body>
+<?php
+    // Player info
+    $player_info = [
+        'name' => 'Sachin Tendulkar',
+        'role' => 'Right-Hand Indian Batsman',
+        'dob' => 'Apr 24, 1973',
+        'birth_place' => 'Mumbai, India',
+        'age' => 50,
+        'playing_role' => 'Top Order Batsman',
+    ];
+
+    // Teams
+    $teams = [
+        ['name' => 'India', 'image' => 'https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png'],
+        ['name' => 'Mumbai', 'image' => 'https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_1280,q_80/lsci/db/PICTURES/CMS/317100/317125.png'],
+        ['name' => 'Mumbai Indians', 'image' => 'https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_1280,q_80/lsci/db/PICTURES/CMS/344000/344062.png'],
+        ['name' => 'Yorkshire', 'image' => 'https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_1280,q_80/lsci/db/PICTURES/CMS/313200/313281.logo.png']
+    ];
+
+    // Achievements
+    $achievements = [
+        ['title' => 'Bharat Ratna Award - 2014', 'image' => 'https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcTUnKNCberLEwU2UQqGUToPY7FnKuFze9bMVl3lsdUGUuk-BoYuCeFLZY_wFNf6MI6e'],
+        ['title' => 'Arjuna Award - 1994', 'image' => 'https://www.samanyagyan.com/images/post/arjuna-award-year-1961-to-2.jpg'],
+    ];
+?>
+
     <div class="container-fluid row">
         <div class="col">
             <img class="ind-image" src="https://static.india.com/imageTopics/95ca27b84de3713cc9468be4ca872048.jpg" alt="">
         </div>
         <div class="ind-info col">
-            <h1>Sachin Tendulkar</h1>
-            <p>Right-Hand Indian Batsman</p>
+            <h1><?php echo $player_info['name']; ?></h1>
+            <p><?php echo $player_info['role']; ?></p>
             <hr>
-            <div class="row"> 
+            <div class="row">
                 <div class="col">
                     <h6>DOB</h6>
-                    <h5>Apr 24, 1973</h5>
+                    <h5><?php echo $player_info['dob']; ?></h5>
                 </div>
                 <div class="col">
                     <h6>BIRTH PLACE</h6>
-                    <h5>Mumbai, India</h5>
+                    <h5><?php echo $player_info['birth_place']; ?></h5>
                 </div>
                 <div class="col">
                     <h6>AGE</h6>
-                    <h5>50 years</h4>
+                    <h5><?php echo $player_info['age']; ?> years</h5>
                 </div>
                 <div class="col">
                     <h6>PLAYING ROLE</h6>
-                    <h5>Top Order Batsman</h5>
+                    <h5><?php echo $player_info['playing_role']; ?></h5>
                 </div>
             </div>
+
+            <!-- Teams Section -->
             <div class="row">
                 <div class="col">
                     <h6>TEAMS</h6>
                     <div class="row">
+                        <?php foreach ($teams as $team): ?>
                         <div class="col">
-                            <img class="team-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png" width="50" height="30" alt="">
-                            <h5>India</h5>
+                            <img class="team-img" src="<?php echo $team['image']; ?>" width="50" height="30" alt="">
+                            <h5><?php echo $team['name']; ?></h5>
                         </div>
-                        <div class="col">
-                            <img class="team-img" src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_1280,q_80/lsci/db/PICTURES/CMS/317100/317125.png" width="50" height="30" alt="">
-                            <h5>Mumbai</h5>
-                        </div>
-                        <div class="col">
-                            <img class="team-img" src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_1280,q_80/lsci/db/PICTURES/CMS/344000/344062.png" width="50" height="30" alt="">
-                            <h5>Mumbai Indians</h5>
-                        </div>
-                        <div class="col">
-                            <img class="team-img" src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_1280,q_80/lsci/db/PICTURES/CMS/313200/313281.logo.png" width="50" height="30" alt="">
-                            <h5>Yorkshire</h5>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
+
+            <!-- Achievements Section -->
             <div class="row">
                 <div class="col">
                     <h6>MAJOR ACHIEVEMENTS</h6>
                     <div class="row">
-                        <div class="col award-1">
-                            <img class="team-img" src="https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcTUnKNCberLEwU2UQqGUToPY7FnKuFze9bMVl3lsdUGUuk-BoYuCeFLZY_wFNf6MI6e" width="50" height="30" alt="">
-                            <h5>Bharat Ratna Award - 2014</h5>
+                        <?php foreach ($achievements as $achievement): ?>
+                        <div class="col">
+                            <img class="team-img" src="<?php echo $achievement['image']; ?>" width="50" height="30" alt="">
+                            <h5><?php echo $achievement['title']; ?></h5>
                         </div>
-                        <div class="col award-2">
-                            <img class="team-img" src="https://www.samanyagyan.com/images/post/arjuna-award-year-1961-to-2.jpg" width="50" height="30" alt="">
-                            <h5>Arjuna Award - 1994</h5>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
         </div>
-        
     </div>
+
     <hr>
 
 

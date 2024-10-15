@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body{
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), grey) ,url('utils/img/lords.webp');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), grey) ,url('utils/img/lords.webp');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -39,15 +39,19 @@
                 </ul>
                 <form class="d-flex" id="searchForm">
                     <input class="form-control me-2 search-box" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
-                    <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class="btn btn-outline-info" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
             </div>
         </div>
     </nav>
     <br>
 
+    <div class="welcome">
+        <center>
+            <span style="color: #FFB347; font-family: Georgia, serif;">Welcome, Cricket Enthusiasts!</span><br>
+        </center>
+    </div>
     <div id="intro">
-        <span style="color: black; font-family: Georgia, serif; font-size: xx-large;">Welcome, Cricket Enthusiasts</span><br><br>
         This platform is a heartfelt homage to the captivating world of cricket,
         where every swing of the bat, breathtaking moment, and legendary player weave the extraordinary tapestry of the sport.
         With a profound love for the game, I embark on a journey to celebrate its rich history,<br>
@@ -92,8 +96,8 @@
     <div class="container py-5">
         <div class="row text-center text-darkblue">
             <div class="col-lg-8 mx-auto">
-                <h1 class="display-6">About Us</h1>
-                <p class="lead mb-0" style="font-family: serif; font-size: x-larger;">
+                <h1 class="display-6 about">About Us</h1>
+                <p class="lead mb-0" style="font-family: serif; font-size: x-larger; color: #F8F8F8;">
                     CricTribute was born out of a shared passion for cricket and a desire to create a 
                     dedicated platform for fans worldwide. With a team of cricket aficionados, 
                     web developers, and content creators, we set out to build a space where enthusiasts 
@@ -113,7 +117,7 @@
     </div>
 
     <!-- Our Team Section -->
-    <h4 class="display-6 text-center mb-5">Our Team</h4>
+    <h4 class="display-6 text-center mb-5 ourteam">Our Team</h4>
     <div class="container mt-3">
         <div class="row text-center justify-content-center">
             <?php
@@ -146,9 +150,6 @@
             ?>
         </div>
     </div>
-
-    <h4 class="display-6 text-center mb-5">Contact Us</h4>
-
     <a id="back-to-top" href="#" class="btn btn-dark btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
 
     <script src="JS/index.js"></script>

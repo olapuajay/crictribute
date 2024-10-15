@@ -4,7 +4,10 @@
     box-sizing: border-box;
 }
 body{
-    background: linear-gradient(to right, #0099ff 24%, #0033cc 75%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), grey) ,url('utils/img/lords.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .container{
