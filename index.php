@@ -39,7 +39,7 @@
                 </ul>
                 <form class="d-flex" id="searchForm">
                     <input class="form-control me-2 search-box" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
-                    <button class="btn btn-outline-info" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class="btn btn-outline-warning" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
             </div>
         </div>
@@ -48,7 +48,7 @@
 
     <div class="welcome">
         <center>
-            <span style="color: #FFB347; font-family: Georgia, serif;">Welcome, Cricket Enthusiasts!</span><br>
+            <span class="text-warning" style="font-family: Georgia, serif;">Welcome, Cricket Enthusiasts!</span><br>
         </center>
     </div>
     <div id="intro">
@@ -96,7 +96,7 @@
     <div class="container py-5">
         <div class="row text-center text-darkblue">
             <div class="col-lg-8 mx-auto">
-                <h1 class="display-6 about">About Us</h1>
+                <h1 class="display-6 text-warning">About Us</h1>
                 <p class="lead mb-0" style="font-family: serif; font-size: x-larger; color: #F8F8F8;">
                     CricTribute was born out of a shared passion for cricket and a desire to create a 
                     dedicated platform for fans worldwide. With a team of cricket aficionados, 
@@ -117,7 +117,7 @@
     </div>
 
     <!-- Our Team Section -->
-    <h4 class="display-6 text-center mb-5 ourteam">Our Team</h4>
+    <h4 class="display-6 text-center mb-5 text-warning">Our Team</h4>
     <div class="container mt-3">
         <div class="row text-center justify-content-center">
             <?php
@@ -152,7 +152,7 @@
     </div>
 
     <div class="footer">
-        <h2 class="display-6 text-center mb-5 getintouch ">Get in touch</h2>
+        <h2 class="display-6 text-center mb-5 text-warning">Get in touch</h2>
         <div class="contact-container">
             <div class="contact-box">
                 <div class="contact-box-left">
@@ -166,7 +166,7 @@
                         <input type="email" class="field" name="email" id="email" placeholder="Email">
                         <input type="text" class="field" name="subject" id="subject" placeholder="Subject">
                         <textarea class="field" id="textMessage" placeholder="Message"></textarea>
-                        <button class="btn btn-warning" type="button" id="submitbtn">Send</button>
+                        <button class="btn btn-warning w-100" type="button" id="submitbtn">Send</button>
                     </form>
                 </div>
             </div>
@@ -174,6 +174,8 @@
     </div>
 
     <br><br>
+
+    <p class="text-center">&copy designed & developed my <a class="text-decoration-none" href="https://github.com/olapuajay">AJAY</a></p>
     <a id="back-to-top" href="#" class="btn btn-dark btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
 
     <script src="JS/index.js"></script>
