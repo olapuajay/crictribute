@@ -241,7 +241,7 @@ textarea {
     min-height: 150px;
 }
 
-.contact-box-right .myForm .message {
+.contact-box-right .message {
     display: none;
 }
 
@@ -255,6 +255,6 @@ textarea {
     }
 
     .contact-box-left iframe {
-        padding: o;
+        padding: 0;
     }
 }

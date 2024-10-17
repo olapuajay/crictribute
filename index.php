@@ -159,14 +159,22 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109105.13533710531!2d75.55760671949895!3d31.288941901512754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5f5e9c489cf3%3A0x4049a5409d53c300!2sLovely%20Professional%20University!5e0!3m2!1sen!2sin!4v1713469144867!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="contact-box-right">
-                    <form id="myForm" action="#" method="POST">
+                    <form id="myForm" action="contact_mail.php" method="POST">
                         <h2>Contact Us</h2>
-                        <div class="message x-larger" id="successMessage"></div>
-                        <input type="text" class="field" name="name" id="name" placeholder="Name">
-                        <input type="email" class="field" name="email" id="email" placeholder="Email">
-                        <input type="text" class="field" name="subject" id="subject" placeholder="Subject">
-                        <textarea class="field" id="textMessage" placeholder="Message"></textarea>
-                        <button class="btn btn-warning w-100" type="button" id="submitbtn">Send</button>
+                        <!-- <div class="message x-larger" id="successMessage">
+                            <?php
+                                if(isset($successMessage)) {
+                                    echo "<span style='color: green;'>$successMessage</span>";
+                                } elseif (isset($errorMessage)) {
+                                    echo "<span style='color: red;'>$errorMessage</span>";
+                                }
+                            ?>
+                        </div> -->
+                        <input type="text" class="field" name="contact_name" id="name" placeholder="Name">
+                        <input type="email" class="field" name="contact_email" id="email" placeholder="Email">
+                        <input type="text" class="field" name="contact_subject" id="subject" placeholder="Subject">
+                        <textarea class="field" name="contact_message" id="textMessage" placeholder="Message"></textarea>
+                        <button class="btn btn-warning w-100" type="submit" name="contact_submit" id="submitbtn">Send</button>
                     </form>
                 </div>
             </div>
@@ -175,7 +183,7 @@
 
     <br><br>
 
-    <p class="text-center">&copy designed & developed my <a class="text-decoration-none" href="https://github.com/olapuajay">AJAY</a></p>
+    <p class="text-center">&copy designed & developed by <a class="text-decoration-none" href="https://github.com/olapuajay">AJAY</a></p>
     <a id="back-to-top" href="#" class="btn btn-dark btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
 
     <script src="JS/index.js"></script>
