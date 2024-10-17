@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="CSS/ind.css">
+    <style>
+        body{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), grey) ,url('utils/img/lords.webp');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
 <?php
@@ -47,19 +55,19 @@
             <hr>
             <div class="row">
                 <div class="col">
-                    <h6>DOB</h6>
+                    <h6 class="text-warning">DOB</h6>
                     <h5><?php echo $player_info['dob']; ?></h5>
                 </div>
                 <div class="col">
-                    <h6>BIRTH PLACE</h6>
+                    <h6 class="text-warning">BIRTH PLACE</h6>
                     <h5><?php echo $player_info['birth_place']; ?></h5>
                 </div>
                 <div class="col">
-                    <h6>AGE</h6>
+                    <h6 class="text-warning">AGE</h6>
                     <h5><?php echo $player_info['age']; ?> years</h5>
                 </div>
                 <div class="col">
-                    <h6>PLAYING ROLE</h6>
+                    <h6 class="text-warning">PLAYING ROLE</h6>
                     <h5><?php echo $player_info['playing_role']; ?></h5>
                 </div>
             </div>
@@ -67,7 +75,7 @@
             <!-- Teams Section -->
             <div class="row">
                 <div class="col">
-                    <h6>TEAMS</h6>
+                    <h6 class="text-warning">TEAMS</h6>
                     <div class="row">
                         <?php foreach ($teams as $team): ?>
                         <div class="col">
@@ -82,7 +90,7 @@
             <!-- Achievements Section -->
             <div class="row">
                 <div class="col">
-                    <h6>MAJOR ACHIEVEMENTS</h6>
+                    <h6 class="text-warning">MAJOR ACHIEVEMENTS</h6>
                     <div class="row">
                         <?php foreach ($achievements as $achievement): ?>
                         <div class="col">
@@ -218,7 +226,7 @@
         </div>
     </div>
     <hr>
-    <h3>Top knocks of virat kohli</h3>
+    <h3 class="text-warning">Top knocks of sachin tendulkar</h3>
         <div id="carouselExampleInterval" class="carousel slide custom-carousel" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active carousel-container" data-bs-interval="2000">
@@ -270,7 +278,7 @@
         <br><br>
         <hr>    
 
-    <h3>Image Gallery</h3>
+    <h3 class="text-warning">Image Gallery</h3>
     <div class="gallery-container">
         <div class="gallery">
             <div class="image">
@@ -304,6 +312,7 @@
             <img src="https://static.tnn.in/thumb/msid-108019996,thumbsize-56418,width-1280,height-720,resizemode-75/108019996.jpg" alt="">
         </div>
     </div>
+    <br><br>
 
 
 

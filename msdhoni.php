@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="CSS/ind.css">
+    <style>
+        body{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), grey) ,url('utils/img/lords.webp');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid row">
@@ -22,25 +30,25 @@
             <hr>
             <div class="row"> 
                 <div class="col">
-                    <h6>DOB</h6>
+                    <h6 class="text-warning">DOB</h6>
                     <h5>Jul 07, 1981</h5>
                 </div>
                 <div class="col">
-                    <h6>BIRTH PLACE</h6>
+                    <h6 class="text-warning">BIRTH PLACE</h6>
                     <h5>Ranchi, India</h5>
                 </div>
                 <div class="col">
-                    <h6>AGE</h6>
+                    <h6 class="text-warning">AGE</h6>
                     <h5>42 years</h4>
                 </div>
                 <div class="col">
-                    <h6>PLAYING ROLE</h6>
+                    <h6 class="text-warning">PLAYING ROLE</h6>
                     <h5>Wicket Keeper</h5>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <h6>TEAMS</h6>
+                    <h6 class="text-warning">TEAMS</h6>
                     <div class="row">
                         <div class="col">
                             <img class="team-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png" width="50" height="30" alt="">
@@ -63,7 +71,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <h6>MAJOR ACHIEVEMENTS</h6>
+                    <h6 class="text-warning">MAJOR ACHIEVEMENTS</h6>
                     <div class="row">
                         <div class="col award-1">
                             <img class="team-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC9mIqAlCKOZvEuZ-FPVAOcdba1sOwjNaKvpi9YUTz6Q&s" width="50" height="30" alt="">
@@ -234,7 +242,7 @@
         </div>
     </div>
     <hr>
-    <h3>Top knocks of MS Dhoni</h3>
+    <h3 class="text-warning">Top knocks of MS Dhoni</h3>
         <div id="carouselExampleInterval" class="carousel slide custom-carousel" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item carousel-container active" data-bs-interval="2000">
@@ -285,7 +293,7 @@
         <br><br>
         <hr>
 
-    <h3>Image Gallery</h3>
+    <h3 class="text-warning">Image Gallery</h3>
     <div class="gallery-container">
         <div class="gallery">
             <div class="image">
@@ -319,6 +327,7 @@
             <img src="https://static.toiimg.com/thumb/imgsize-23456,msid-106343128,width-600,resizemode-4/106343128.jpg" alt="">
         </div>
     </div>
+    <br><br>
 
 
 

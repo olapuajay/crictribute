@@ -3,12 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), grey) ,url('utils/img/lords.webp');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
 
 .container{
     display: flex;
