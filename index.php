@@ -161,15 +161,6 @@
                 <div class="contact-box-right">
                     <form id="myForm" action="contact_mail.php" method="POST">
                         <h2>Contact Us</h2>
-                        <!-- <div class="message x-larger" id="successMessage">
-                            <?php
-                                if(isset($successMessage)) {
-                                    echo "<span style='color: green;'>$successMessage</span>";
-                                } elseif (isset($errorMessage)) {
-                                    echo "<span style='color: red;'>$errorMessage</span>";
-                                }
-                            ?>
-                        </div> -->
                         <input type="text" class="field" name="contact_name" id="name" placeholder="Name">
                         <input type="email" class="field" name="contact_email" id="email" placeholder="Email">
                         <input type="text" class="field" name="contact_subject" id="subject" placeholder="Subject">
