@@ -27,14 +27,20 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <li class="nav-item text-light">
+                        <a class="nav-link btn btn-outline-primary" aria-current="page" href="registration.php" id="Registration">Registration</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#" id="Videos">Videos</a>
+                    <li class="nav-item text-light">
+                        <a class="nav-link btn btn-primary" aria-current="page" href="login.php" id="Login">Login</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#" id="Login">Login</a>
+                    <li class="nav-item dropdown text-light">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-dark" href="profile.php">Profile</a></li>
+                            <li><a class="dropdown-item text-dark" href="logout.php">Logout</a></li>
+                        </ul>
                     </li>
                 </ul>
                 <form class="d-flex" id="searchForm">
@@ -178,7 +184,7 @@
     <a id="back-to-top" href="#" class="btn btn-dark btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
 
     <script src="JS/index.js"></script>
-    
+
 
 </body>
 </html>
