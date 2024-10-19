@@ -35,7 +35,7 @@
                         <a class="nav-link" aria-current="page" href="#" id="Videos">Videos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#" id="Login">Login</a>
+                        <a class="nav-link" aria-current="page" href="#" id="Register">Register</a>
                     </li>
                 </ul>
                 <form class="d-flex" id="searchForm">

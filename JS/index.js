@@ -10,6 +10,9 @@ document.getElementById("MSD-page").addEventListener("click", () => {
 document.getElementById("Videos").addEventListener("click", () => {
   window.location.href = "video.php";
 });
+document.getElementById("Register").addEventListener("click", () => {
+  window.location.href = "registration.php";
+})
 
 
 $(document).ready(function () {
