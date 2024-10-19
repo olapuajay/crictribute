@@ -38,7 +38,7 @@ document.getElementById("searchForm").addEventListener("submit", function(event)
   // Get the value entered in the search box
   var searchQuery = document.querySelector(".search-box").value.toLowerCase().trim();
 
-  // Check the search query and redirect accordingly
+  // Check the search query and redirect accordingly  
   if (
       searchQuery === "virat kohli" || 
       searchQuery === "viratkohli"
