@@ -33,7 +33,6 @@
     <form action="registration.php" method="POST">
       <h1 class="text-center">REGISTER</h1>
       <hr class="hr" />
-      <div class="divider"></div>
       <div class="form-group">
         <input type="text" name="fullname" class="form-control" placeholder="Full Name">
       </div>
