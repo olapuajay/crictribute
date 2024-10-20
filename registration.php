@@ -47,7 +47,7 @@
         <input type="password" name="repeat_password" class="form-control" placeholder="Confirm Password">
       </div>
       <div class="form-btn">
-        <input type="submit" name="submit" class="btn btn-primary" value="Register">
+        <input type="submit" name="submit" class="btn btn-primary w-100" value="Register">
       </div>
     </form>
   </div>
