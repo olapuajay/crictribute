@@ -30,6 +30,35 @@
 </head>
 <body>
   <div class="container">
+    <?php
+      if(isset($_POST["submit"])) {
+        $fullName = $_POST["fullname"];
+        $email = $_POST["email"];
+        $password = $_POST["password"];
+        $passwordRepeat = $_POST["repeat_password"];
+        $errors = array();
+        if(empty($fullName) OR empty($email) OR empty($password) OR empty($passwordRepeat)) {
+          array_push($errors, "All fields are required");
+        }
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+          array_push($errors, "Email is not valid");
+        }
+        if(strlen($password) < 8) {
+          array_push($errors, "password must be atleast 8 characters long");
+        }
+        if($password !== $passwordRepeat) {
+          array_push($errors, "Password does not match");
+        }
+        if(count($errors) > 0) {
+          foreach($errors as $error) {
+            echo "<div class='alert alert-danger'>$error</div>";
+          }
+        }
+        else {
+          // Insert data into database
+        }
+      }
+    ?>
     <form action="registration.php" method="POST">
       <h1 class="text-center">REGISTER</h1>
       <hr class="hr" />
