@@ -33,6 +33,34 @@
 </head>
 <body>
   <div class="container">
+    <?php
+      if(isset($_POST["login"])) {
+        $email = $_POST["email"];
+        $password = $_POST["password"];
+
+        $errors = array();
+        if(empty($email) OR empty($password)) {
+          array_push($errors, "All fields are required");
+        }
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+          array_push($errors, "Email is not valid");
+        }
+        require_once "database.php";
+        $sql = "SELECT * FROM users WHERE email = '$email'";
+        $result = mysqli_query($conn, $sql);
+        $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        if($user) {
+          if(password_verify($password, $user["password"])) {
+            header("Location: index.php");
+            die();
+          } else {
+            echo "<div class='alert alert-danger'>Password doesn't match</div>";
+          }
+        } else {
+          echo "<div class='alert alert-danger'>Email doesn't exists!</div>";
+        }
+      }
+    ?>
     <form action="login.php" method="POST">
       <h1 class="text-center">LOGIN</h1>
       <hr class="hr" />
@@ -44,6 +72,9 @@
       </div>
       <div class="form-btn">
         <input type="submit" name="login" class="btn btn-primary w-100" value="Login">
+      </div>
+      <div class="text-center mt-3">
+        <p>New user? <a href="registration.php">Register</a></p>
       </div>
     </form>
   </div>
