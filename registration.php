@@ -55,6 +55,13 @@
         if($password !== $passwordRepeat) {
           array_push($errors, "Password does not match");
         }
+        require_once "database.php";
+        $sql = "SELECT * FROM users WHERE email = '$email'";
+        $result = mysqli_query($conn, $sql);
+        $rowCount = mysqli_num_rows($result);
+        if($rowCount > 0) {
+          array_push($errors, "Email already exists!");
+        }
         if(count($errors) > 0) {
           foreach($errors as $error) {
             echo "<div class='alert alert-danger'>$error</div>";
