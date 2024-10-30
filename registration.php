@@ -101,6 +101,9 @@
       <div class="form-btn">
         <input type="submit" name="submit" class="btn btn-primary w-100" value="Register">
       </div>
+      <div class="text-center mt-3">
+        <p>Already have an account? <a href="login.php">Login</a></p>
+      </div>
     </form>
   </div>
 
