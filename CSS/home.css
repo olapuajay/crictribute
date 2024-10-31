@@ -31,11 +31,14 @@
 }
 
 .collapse ul {
-    margin-left: 30%;
+    margin-left: 10%;
     display: flex;
-    gap: 40px;
+    gap: 25px;
     align-items: center;
     justify-content: center;
+}
+.collapse form {
+    margin-left: 20%;
 }
 
 .collapse ul li a {

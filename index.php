@@ -17,7 +17,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
         body{
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), grey) ,url('utils/img/lords.webp');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url('utils/img/lords.webp');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -32,6 +32,12 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+                <form class="d-flex" id="searchForm">
+                    <input class="form-control me-2 search-box" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
+                    <button class="btn btn-outline-warning" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -46,10 +52,6 @@
                         <a class="nav-link" aria-current="page" href="logout.php" id="Logout">Logout</a>
                     </li>
                 </ul>
-                <form class="d-flex" id="searchForm">
-                    <input class="form-control me-2 search-box" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
-                    <button class="btn btn-outline-warning" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
             </div>
         </div>
     </nav>
@@ -184,8 +186,8 @@
 
     <br><br>
 
-    <p class="text-center">&copy designed & developed by <a class="text-decoration-none" href="https://github.com/olapuajay">AJAY</a></p>
-    <a id="back-to-top" href="#" class="btn btn-dark btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+    <p class="text-center text-light">&copy CricTribute 2024. All rights reserved. developed by <a class="text-decoration-none" href="https://github.com/olapuajay">AJAY</a></p>
+    <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="JS/index.js"></script>

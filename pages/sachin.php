@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../CSS/ind.css">
     <style>
         body{
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), grey) ,url('../utils/img/lords.webp');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url('../utils/img/lords.webp');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -313,7 +313,6 @@
         </div>
     </div>
     <br><br>
-    <p class="text-center">&copy designed & developed my <a class="text-decoration-none" href="https://github.com/olapuajay">AJAY</a></p>
 
 
 
