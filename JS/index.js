@@ -1,14 +1,14 @@
 document.getElementById("vk-page").addEventListener("click", () => {
-  window.location.href = "viratkohli.php";
+  window.location.href = "pages/viratkohli.php";
 });
 document.getElementById("sachin-page").addEventListener("click", () => {
-  window.location.href = "sachin.php";
+  window.location.href = "pages/sachin.php";
 });
 document.getElementById("MSD-page").addEventListener("click", () => {
-  window.location.href = "msdhoni.php";
+  window.location.href = "pages/msdhoni.php";
 });
 document.getElementById("Videos").addEventListener("click", () => {
-  window.location.href = "video.php";
+  window.location.href = "pages/video.php";
 });
 document.getElementById("Register").addEventListener("click", () => {
   window.location.href = "registration.php";

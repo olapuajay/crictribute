@@ -8,10 +8,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="CSS/ind.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/ind.css">
     <style>
         body{
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), grey) ,url('utils/img/lords.webp');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), grey) ,url('../utils/img/lords.webp');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -115,7 +115,7 @@
     </div>
       
     <div class="content">
-        <div id="profileContent" style="display: none;">
+        <div id="profileContent" style="display: none; color: white">
             Sachin Tendulkar was the most complete batter of his time, the most prolific run-maker 
             of all time, and arguably the biggest cricket icon the game has ever known.<br><br>
 
@@ -214,7 +214,7 @@
                 </div>
             </div>
         </div>
-        <div id="recordsContent" style="display: none;">
+        <div id="recordsContent" style="display: none; color: white">
             <div class="record-grid">
                 <p>Most test hundreds(51)</p>
                 <p>Most intl runs(34357)</p>
