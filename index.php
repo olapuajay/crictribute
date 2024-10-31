@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!isset($_SESSION["user"])) {
+        header("Location: login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,10 +37,13 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#" id="Videos">Videos</a>
+                        <a class="nav-link" aria-current="page" href="#" id="Videos">Moments</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#" id="Register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="logout.php" id="Logout">Logout</a>
                     </li>
                 </ul>
                 <form class="d-flex" id="searchForm">
