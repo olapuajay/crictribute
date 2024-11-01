@@ -44,20 +44,22 @@ document.getElementById("searchForm").addEventListener("submit", function(event)
   // Check the search query and redirect accordingly  
   if (
       searchQuery === "virat kohli" || 
-      searchQuery === "viratkohli"
+      searchQuery === "viratkohli" ||
+      searchQuery === "virat"
   ) {
-      window.location.href = "viratkohli.php";
+      window.location.href = "pages/viratkohli.php";
   } else if (
       searchQuery === "sachin tendulkar" || 
-      searchQuery === "sachintendulkar"
+      searchQuery === "sachintendulkar" ||
+      searchQuery === "sachin"
   ) {
-      window.location.href = "sachin.php";
+      window.location.href = "pages/sachin.php";
   } else if (
       searchQuery === "ms dhoni" || 
       searchQuery === "msdhoni" || 
       searchQuery === "dhoni"
   ) {
-      window.location.href = "msdhoni.php";
+      window.location.href = "pages/msdhoni.php";
   } else if (searchQuery === "") {
       alert("Search for any player.");
   } else {
