@@ -14,6 +14,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <style>
     body {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url('utils/img/lords.webp');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
       padding: 50px;
     }
     .container {
@@ -21,6 +25,8 @@
       margin: 0 auto;
       padding: 50px;
       box-shadow: rgb(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      background: white;
+      border-radius: 15px;
     }
     .form-group {
       margin-bottom: 30px;
