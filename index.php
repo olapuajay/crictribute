@@ -1,5 +1,6 @@
 <?php
     session_start();
+    ob_start();
     if(!isset($_SESSION["user"])) {
         header("Location: login.php");
     }
@@ -20,6 +21,11 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 0;
         }
     </style>
 </head>
@@ -162,6 +168,34 @@
     </div>
 
     <!-- Contact Section -->
+    <?php
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $contact_name = $_POST['contact_name'];
+            $contact_email = $_POST['contact_email'];
+            $contact_subject = $_POST['contact_subject'];
+            $contact_message = $_POST['contact_message'];
+
+            $contact_mailheader = "From: " . $contact_name . "<" . $contact_email . ">\r\n";
+            $contact_mailheader .= "Reply-To: " . $contact_email . "\r\n";
+
+            $recipient = "ajju6533@gmail.com";
+            
+            // Attempt to send the email and check for success
+            if (mail($recipient, $contact_subject, $contact_message, $contact_mailheader)) {
+                // Show a JavaScript alert on successful mail send
+                echo "<script>
+                        alert('Thank you for contacting us. We will get back to you soon.');
+                        window.location.href = 'index.php';
+                    </script>";
+            } else {
+                // Show an error alert if mail failed
+                echo "<script>
+                        alert('Error! Message not sent. Please try again.');
+                        window.location.href = 'index.php';
+                    </script>";
+            }
+        }
+        ?>
     <div class="footer">
         <h2 class="display-6 text-center mb-5 text-warning">Get in touch</h2>
         <div class="contact-container">
@@ -170,12 +204,16 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109105.13533710531!2d75.55760671949895!3d31.288941901512754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5f5e9c489cf3%3A0x4049a5409d53c300!2sLovely%20Professional%20University!5e0!3m2!1sen!2sin!4v1713469144867!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="contact-box-right">
-                    <form id="myForm" action="contact_mail.php" method="POST">
+                    <form id="myForm" action="index.php" method="POST">
                         <h2>Contact Us</h2>
-                        <input type="text" class="field" name="contact_name" id="name" placeholder="Name">
-                        <input type="email" class="field" name="contact_email" id="email" placeholder="Email">
-                        <input type="text" class="field" name="contact_subject" id="subject" placeholder="Subject">
-                        <textarea class="field" name="contact_message" id="textMessage" placeholder="Message"></textarea>
+                        <input type="text" class="field" name="contact_name" id="name" placeholder="Name" required>
+
+                        <input type="email" class="field" name="contact_email" id="email" placeholder="Email" required>
+
+                        <input type="text" class="field" name="contact_subject" id="subject" placeholder="Subject" required>
+
+                        <textarea class="field" name="contact_message" id="textMessage" placeholder="Message" required></textarea>
+
                         <button class="btn btn-warning w-100" type="submit" name="contact_submit" id="submitbtn">Send</button>
                     </form>
                 </div>
@@ -192,3 +230,5 @@
     <script src="JS/index.js"></script>
 </body>
 </html>
+
+<?php ob_end_flush(); ?>
