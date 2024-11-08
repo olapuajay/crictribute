@@ -24,8 +24,14 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url("utils/img/lords.webp");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
         }
         .container {
+          background: white;
+          box-shadow: rgb(100, 100, 111, 0.2) 0px 7px 29px 0px;
           border: 2px solid black;
           padding: 30px;
           border-radius: 20px;
