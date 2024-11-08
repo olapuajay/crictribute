@@ -131,7 +131,7 @@
     <div class="container mt-3">
         <div class="row text-center justify-content-center">
             <?php
-            // PHP array for dynamic team members (example)
+            // PHP array for dynamic team members
             $team = [
                 ["name" => "MITCHELL", "role" => "CEO - Founder", "img" => "utils/img/OI2.jpg"],
                 ["name" => "VIRAT KOHLI", "role" => "Brand Ambassador", "img" => "utils/img/vk.jpg"],
