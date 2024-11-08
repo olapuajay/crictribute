@@ -6,6 +6,7 @@
   $contact_message = $_POST['contact_message'];
 
   $contact_mailheader = "From: " . $contact_name . "<" . $contact_email . ">\r\n";
+  $contact_mailheader .= "Reply-To: " . $contact_email . "\r\n";
 
   $recipient = "ajju6533@gmail.com";
 
@@ -43,7 +44,7 @@
     </head>
     <body>
       <div class="container">
-          <center><h1 style= >Thank you for contacting with us. We will get back to you in a while.</h1></center>
+          <center><h1 style= >Thank you for contacting us. We will get back to you in a while.</h1></center>
           <center><a href="index.php"><button> Go Back </button></a></center>
       </div>
     </body>
