@@ -1,4 +1,4 @@
-![Screenshot 2024-11-01 171636](https://github.com/user-attachments/assets/54bd0364-ecca-4ac6-b5bb-5671f3e6fb4e)Project Description
+Project Description
 
 The CricTribute website is a web application dedicated to cricket fans, providing an enhanced user experience by incorporating interactive features and functionalities 
 using PHP and MySQL. Initially, the site was a static webpage, but through this project, it has been upgraded to support dynamic and user-specific interactions. 
